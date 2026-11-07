@@ -1,0 +1,56 @@
+[
+    {
+        "chunk_id": "test001",
+        "document_id": "doc001",
+        "content": "Metformin is commonly used to control blood glucose levels. Common side effects may include nausea and diarrhea.",
+        "metadata": {
+            "source": "diabetes.pdf",
+            "document_type": "medical"
+        }
+    },
+    {
+        "chunk_id": "test002",
+        "document_id": "doc002",
+        "content": "Paracetamol is commonly used to reduce fever and relieve mild pain.",
+        "metadata": {
+            "source": "pain.pdf",
+            "document_type": "medical"
+        }
+    },
+    {
+        "chunk_id": "test003",
+        "document_id": "doc003",
+        "content": "Insulin is a hormone that helps control blood sugar levels in people with diabetes.",
+        "metadata": {
+            "source": "diabetes2.pdf",
+            "document_type": "medical"
+        }
+    },
+    {
+        "chunk_id": "test004",
+        "document_id": "doc004",
+        "content": "High blood pressure is also called hypertension. It can increase the risk of heart disease.",
+        "metadata": {
+            "source": "hypertension.pdf",
+            "document_type": "medical"
+        }
+    },
+    {
+        "chunk_id": "test005",
+        "document_id": "doc005",
+        "content": "Antibiotics are medicines used to treat certain bacterial infections.",
+        "metadata": {
+            "source": "antibiotics.pdf",
+            "document_type": "medical"
+        }
+    },
+    {
+        "chunk_id": "test006",
+        "document_id": "doc006",
+        "content": "This is a general information document about computers and software.",
+        "metadata": {
+            "source": "computer.txt",
+            "document_type": "general"
+        }
+    }
+]

@@ -1,0 +1,14 @@
+import os
+
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 200
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+EMBEDDING_PROVIDER = "sentence_transformers"
+
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+
+EMBEDDING_DIMENSION = 384
+
+EMBEDDING_BATCH_SIZE = int(os.getenv("EMBEDDING_BATCH_SIZE", "32"))

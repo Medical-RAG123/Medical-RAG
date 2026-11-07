@@ -1,0 +1,50 @@
+import structlog
+from celery import Task
+from app.jobs.celery_app import celery_app
+from app.database import SessionLocal
+from app.models.background_job import JobStatus
+from app.repositories.background_job_repository import BackgroundJobRepository
+
+logger = structlog.get_logger(__name__)
+
+
+@celery_app.task(
+    bind=True,
+    name="medical_rag.process_document",
+    max_retries=3,
+    default_retry_delay=10,
+)
+def process_document_task(self: Task, document_id: str, job_id: str):
+    db = SessionLocal()
+    repo = BackgroundJobRepository(db)
+
+    try:
+        repo.update_status(job_id, JobStatus.RUNNING, task_id=self.request.id)
+        logger.info("Started processing document task", job_id=job_id, document_id=document_id)
+
+        # Connect your existing document ingestion/indexing pipeline here
+
+        repo.update_status(job_id, JobStatus.COMPLETED, progress=100.0)
+        logger.info("Completed document processing task", job_id=job_id, document_id=document_id)
+
+    except Exception as exc:
+        logger.error("Document processing failed", job_id=job_id, error=str(exc))
+
+        if self.request.retries < self.max_retries:
+            repo.update_status(
+                job_id,
+                JobStatus.RETRY,
+                attempt_count=self.request.retries + 1,
+                error_message=str(exc),
+            )
+            raise self.retry(exc=exc, countdown=2 ** self.request.retries)
+
+        repo.update_status(
+            job_id,
+            JobStatus.FAILED,
+            error_code="PROCESSING_ERROR",
+            error_message=str(exc),
+        )
+    finally:
+        db.close()
+        $env:PYTHONPATH = "."

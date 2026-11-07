@@ -1,0 +1,17 @@
+{
+  "email": "student@example.com",
+  "username": "student01",
+  "password": "StrongPassword123",
+  "full_name": "Student One"
+}
+{
+  "id": "user_001",
+  "email": "student@example.com",
+  "username": "student01",
+  "role": "student"
+}
+{
+    "email": "...",
+    "password": "...",
+    "role": "admin"
+}

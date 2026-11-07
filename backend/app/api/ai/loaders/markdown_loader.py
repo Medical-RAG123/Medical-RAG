@@ -1,0 +1,11 @@
+from app.api.ai.loaders.base import DocumentLoader
+
+
+class MarkdownLoader(DocumentLoader):
+    def load(self, file_path: str) -> str:
+        with open(
+            file_path,
+            "r",
+            encoding="utf-8",
+        ) as file:
+            return file.read()

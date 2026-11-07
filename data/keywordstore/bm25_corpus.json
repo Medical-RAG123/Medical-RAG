@@ -1,0 +1,32 @@
+[
+    {
+        "chunk_id": "chunk-3",
+        "document_id": "document-2",
+        "content": "Heart disease information.",
+        "metadata": {}
+    },
+    {
+        "chunk_id": "chunk-3",
+        "document_id": "document-2",
+        "content": "Heart disease information.",
+        "metadata": {}
+    },
+    {
+        "chunk_id": "chunk-1",
+        "document_id": "document-1",
+        "content": "Diabetes affects blood sugar levels.",
+        "metadata": {
+            "source": "test1.txt",
+            "file_type": "txt"
+        }
+    },
+    {
+        "chunk_id": "chunk-2",
+        "document_id": "document-2",
+        "content": "Hypertension is related to high blood pressure.",
+        "metadata": {
+            "source": "test2.txt",
+            "file_type": "txt"
+        }
+    }
+]

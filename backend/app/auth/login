@@ -1,0 +1,8 @@
+{
+  "email": "student@example.com",
+  "password": "StrongPassword123"
+}
+{
+  "access_token": "eyJ...",
+  "token_type": "bearer"
+}

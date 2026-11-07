@@ -1,0 +1,27 @@
+[
+    {
+        "query": "What is metformin used for?",
+        "relevant_chunk_ids": ["test001"],
+        "relevant_document_ids": ["doc001"]
+    },
+    {
+        "query": "What are common side effects of metformin?",
+        "relevant_chunk_ids": ["test001"],
+        "relevant_document_ids": ["doc001"]
+    },
+    {
+        "query": "What is insulin?",
+        "relevant_chunk_ids": ["test003"],
+        "relevant_document_ids": ["doc003"]
+    },
+    {
+        "query": "What is hypertension?",
+        "relevant_chunk_ids": ["test004"],
+        "relevant_document_ids": ["doc004"]
+    },
+    {
+        "query": "What are antibiotics used for?",
+        "relevant_chunk_ids": ["test005"],
+        "relevant_document_ids": ["doc005"]
+    }
+]

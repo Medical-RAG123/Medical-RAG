@@ -1,0 +1,1 @@
+POST / documents / {id} / reindex

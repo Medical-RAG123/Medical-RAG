@@ -1,0 +1,12 @@
+
+{
+  "name": "medical_rag_retrieval",
+  "version": "1.0",
+  "examples": [
+    {
+      "query": "What are the symptoms of diabetes?",
+      "relevant_chunk_ids": ["test001", "test004"],
+      "relevant_document_ids": []
+    }
+  ]
+}
